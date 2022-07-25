@@ -1,0 +1,41 @@
+<block-ui>
+    <div class="content" role="main">
+        <!-- Resources -->
+        <h2>Dar de alta vehiculo</h2>
+        <p></p>
+      
+        <div class="card-container">
+            <mat-card class="example-card">
+                <mat-card-content>
+                    <form class="example-form">
+                        <mat-grid-list cols="1" rowHeight="2:1">
+                            <mat-grid-tile>
+                                <mat-form-field class="example-full-width" appearance="fill">
+                                    <mat-label>Placa</mat-label>
+                                    <input [(ngModel)]="plate" name="plate" matInput #message maxlength="10">
+                                    <mat-hint align="end">{{message.value.length}} / 10</mat-hint>
+                                </mat-form-field>
+                            </mat-grid-tile>
+                            <mat-grid-tile>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Contrato</mat-label>
+                                    <mat-select [(ngModel)]="selectedValue" name="food">
+                                      <mat-option *ngFor="let contract of contracts" [value]="contract.id">
+                                        {{contract.contract}}
+                                      </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </mat-grid-tile>
+                          </mat-grid-list>
+                    </form>
+                </mat-card-content>
+                
+                <mat-card-actions>
+                    <button mat-button color="warn" (click)="cancel()">Cancelar</button>
+                    <button mat-button color="primary" (click)="updateContract()">Guardar</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+    </div>
+</block-ui>
+

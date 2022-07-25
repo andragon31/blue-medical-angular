@@ -1,0 +1,30 @@
+
+<block-ui>
+  <div class="content" role="main">
+    <!-- Resources -->
+    <h2>Administración de estacionamiento vehicular</h2>
+    <p>seleccione una de las siguientes opciones:</p>
+  
+    <div class="card-container">
+      <a class="card" target="_blank" rel="noopener" (click)="checkInOut('checkIn')">
+        <span>Registrar entrada</span>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" (click)="checkInOut('checkOut')">
+        <span>Registrar salida</span>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" (click)="redirect('contract_vehicle')">
+        <span>Dar de alta vehículo</span>
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" (click)="startMonth()">
+        <span>Comienzo de mes</span> 
+      </a>
+  
+      <a class="card" target="_blank" rel="noopener" (click)="redirect('generate_pdf')">
+        <span>Pago residentes</span>
+      </a>
+    </div>
+  </div>
+</block-ui>
